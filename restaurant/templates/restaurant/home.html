@@ -1,5 +1,67 @@
-{% extends 'restaurant/base.html'%}
-
+{% extends  'restaurant/base.html' %}
 {% block content %}
-    <h1>Hello World!</h1>
-{% endblock%}
+<div>
+    <div>
+        <h2>Ingredients</h2>
+        <table>
+            <thead>
+                <tr>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Unit</th>
+                <th>Unit Price</th>
+            </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr/>
+    <div>
+        <h2>Purchases</h2>
+        <table>
+            <thead>
+                <tr>
+                <th>Menu Item</th>
+                <th>Price</th>
+                <th>Time</th>
+                
+            </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr/>
+
+
+<div>
+    <h2>Menu</h2>
+   <ul class="menu-items">
+    <li>
+        <div class="menu-items-header">
+            <div class="menu-item-title">{{menu_item.title}}</div>
+            <div class="menu_item-price">{{menu_item.price}}</div>
+        </div>
+        <ul class="menu-item-ingredients">
+            <li>{{recipe_requirement.quantity}} {{recipe_requirement.ingredient.unit }}</li>
+        </ul>
+    </li>
+   </ul>
+</div>
+</div>
+{% endblock %}

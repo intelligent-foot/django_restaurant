@@ -1,0 +1,9 @@
+{% extends 'restaurant/base.html' %}
+
+{% block content %}
+<form method="post" class="flex-form">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type=" submit" value="Submit"/>
+</form>
+{% endblock %}

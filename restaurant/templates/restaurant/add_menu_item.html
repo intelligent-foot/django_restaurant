@@ -1,0 +1,12 @@
+{% extends 'restaurant/base.html' %}
+
+{% block content %}
+<h2>Add item to Menu</h2>
+<form method="post">
+    <div>
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Submit"/>
+</div>
+</form>
+{% endblock %}
