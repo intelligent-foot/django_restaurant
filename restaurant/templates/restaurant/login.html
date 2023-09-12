@@ -1,12 +1,12 @@
 {% extends 'restaurant/base.html'%}
-
+{% block title %} Valley View -- Login {% endblock %}
 {% block content %}
-<div class="login-form">
-    <h2>Login</h2>
-<form method="post">
-    {% csrf_token %}
-    {{form}}
-    <button class="submit-button" type="submit">Login</button>
-</form>
-</div>
+    <div class="login-form">
+        <h2>Login</h2>
+        <form method="post">
+            {% csrf_token %}
+             {{form}}
+            <button class="submit-button" type="submit">Login</button>
+        </form>
+    </div>
 {% endblock%}
