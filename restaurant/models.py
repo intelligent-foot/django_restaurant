@@ -13,10 +13,10 @@ class Ingredient(models.Model):
         verbose_name = "Ingredient"
     def __str__(self) :
         return f"""
-        name = {self.ingredient_name};
-        qty = {self.ingredient_quantity};
-        unit = {self.ingredient_unit};
-        unit_price = {self.ingredient_price_per_unit}
+        name = {self.name};
+        qty = {self.quantity};
+        unit = {self.unit};
+        unit_price = {self.price_per_unit}
         """
     
     def get_absolute_path(self):

@@ -1,9 +1,10 @@
-{extends 'restaurant/base.html'}
+{%extends 'restaurant/base.html'%}
+{% load static %}
 {% block head %}
 {% endblock %}
 {% block content %}
     <h2>Purchases</h2>
-    <table class=" inventory-table">
+    <table class=" restaurant-table">
         <thead>
             <tr>
                 <th>Menu Item</th>
@@ -23,7 +24,7 @@
     </table>
     <hr/>
     <h2>Totals</h2>
-    <div style="color: green;">Total Revenue:</div>
-    <div style="color: red;">Total Cost:</div>
-    <div  style="color: blue;">Total Profit:</div>
-{% end block %}
+    <div style="color: green;">Total Revenue:${{revenue|stringformat:".2f"}}</div>
+    <div style="color: red;">Total Cost:${{total_cost|stringformat:".2f"}}</div>
+    <div  style="color: blue;">Total Profit:${{profit|stringformat:".2f"}}</div>
+{% endblock %}
