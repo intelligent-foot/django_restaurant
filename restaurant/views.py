@@ -27,6 +27,7 @@ class NewIngredientsView(LoginRequiredMixin,CreateView):
     model = Ingredient
     template_name = "restaurant/add_ingredient.html"
     form_class = IngredientForm
+    
 
 
 
